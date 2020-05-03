@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<header class="masthead d-flex">
+    <div class="container text-center my-auto">
+      <h1 class="mb-1" >Cat or Dog</h1>
+      <h3 class="mb-5">
+        <em>Upload a picture of your pet</em>
+          
+      </h3>
+      <!-- <input class="btn btn-xl" type="file" id="image" name = "image"> -->
+      <form action="/classify" method="post" enctype="multipart/form-data" style="margin-top: 30px; width: 80%; text-align: center; margin: auto;">
+        <div class="file has-name is-centered">     
+            <label class="file-label">
+              <input class="file-input" type="file" id="image" name = "image">
+            </label>
+          </div>
+          <br>
+          <input type="submit" value="Predict" class="btn btn-primary btn-xl js-scroll-trigger" name = "image" id="classify_button">
+      </form>
+      <!-- <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Predict</a> -->
+    </div>
+    <div class="overlay"></div>
+
+    
+</header>
+
+
+{% endblock content %}

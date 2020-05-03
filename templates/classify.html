@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container text-center">
+    <img class="img-fluid" src="{{ url_for('send_file', filename=image_file_name)}}" />
+    <h2 class="mx-auto mb-5"> This is a
+    <em>{{ label }}</em>
+    {{ prob}}%</h2>
+    <a class="btn btn-primary btn-xl" href="/">Home</a>
+</div>
+
+{% endblock content %}
